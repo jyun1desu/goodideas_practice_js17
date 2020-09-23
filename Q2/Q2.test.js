@@ -1,4 +1,6 @@
-const { confirmInteger , getRemainderValue , confirmSameRemainder } = require('./Q2_module');
+const { confirmInteger } = require('./Q2_modules/confirmInteger');
+const { confirmSameRemainder } = require('./Q2_modules/confirmSameRemainder');
+const { getRemainderValue } = require('./Q2_modules/getRemainderValue');
 
 //確認輸入格式
 test("空字串",() =>  {
@@ -53,7 +55,7 @@ test("除以3的餘數",() =>  {
 });
 
 //兩數餘數相同
-test("除以3的餘數",() =>  {
+test("餘數相同",() =>  {
     //Arrange
     const firstInput = "10";
     const secondInput = "13"
@@ -66,7 +68,7 @@ test("除以3的餘數",() =>  {
 
 //兩數餘數不同
 
-test("除以3的餘數",() =>  {
+test("餘數不相同",() =>  {
     //Arrange
     const firstInput = "15";
     const secondInput = "13"

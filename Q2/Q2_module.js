@@ -1,4 +1,4 @@
-//確認輸入格式
+//確認輸入格式：整數
 function confirmInteger(strInput){
     //空字串
     const isEmptyString = !strInput.trim().length
@@ -16,8 +16,6 @@ function confirmInteger(strInput){
         return '請勿輸入整數以外的內容';
     }
     //整數
-    // else {
-    // }
     return 'integer';
 }
 
