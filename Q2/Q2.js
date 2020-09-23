@@ -2,7 +2,7 @@
 //判斷餘數是否相同，若相同，則於螢幕上顯示「餘數相同」。
 
 const readline = require('readline');
-const { confirmInteger , confirmSameRemainder } = require('./Q2_module');
+const { confirmInteger , confirmSameRemainder , getRemainderValue } = require('./Q2_module');
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -17,7 +17,9 @@ function main() {
                 return main();
             }
 
-            secondQuestion();
+            let remainderValue = getRemainderValue(firstStrInput);
+            console.log(`除以3餘數為${remainderValue}`);
+            return secondQuestion();
 
         function secondQuestion() {
             rl.question('請輸入第二個整數', (secondStrInput) => {
@@ -27,8 +29,9 @@ function main() {
                     return secondQuestion();
                 }
 
+                let remainderValue = getRemainderValue(secondStrInput);
                 let result = confirmSameRemainder(firstStrInput,secondStrInput);
-                console.log(`${result}`);
+                console.log(`除以3餘數為${remainderValue}，${result}`);
                 rl.close();
             });
         }

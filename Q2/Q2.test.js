@@ -57,7 +57,7 @@ test("除以3的餘數",() =>  {
     //Arrange
     const firstInput = "10";
     const secondInput = "13"
-    const expectedResult = "餘數相同";
+    const expectedResult = "兩者餘數相同";
     //Act
     const actualResult = confirmSameRemainder(firstInput,secondInput);
     //Assert
@@ -70,7 +70,7 @@ test("除以3的餘數",() =>  {
     //Arrange
     const firstInput = "15";
     const secondInput = "13"
-    const expectedResult = "餘數不相同";
+    const expectedResult = "兩者餘數不相同";
     //Act
     const actualResult = confirmSameRemainder(firstInput,secondInput);
     //Assert

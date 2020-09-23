@@ -32,11 +32,11 @@ function confirmSameRemainder(firstStrInput,secondStrInput) {
     let secondRemainderValue = getRemainderValue(secondStrInput);
     //餘數相同
     if(firstRemainderValue === secondRemainderValue) {
-        return "餘數相同"
+        return "兩者餘數相同"
     }
     //餘數不相同
     else {
-        return "餘數不相同"
+        return "兩者餘數不相同"
     }
 }
 
