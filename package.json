@@ -1,0 +1,23 @@
+{
+  "name": "j1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/dwatow/j1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/dwatow/j1/issues"
+  },
+  "homepage": "https://gitlab.com/dwatow/j1#readme",
+  "devDependencies": {
+    "jest": "^26.4.2"
+  }
+}
