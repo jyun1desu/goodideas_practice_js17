@@ -1,26 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1600840940006" clover="3.2.0">
-  <project timestamp="1600840940006" name="All files">
-    <metrics statements="17" coveredstatements="17" conditionals="10" coveredconditionals="10" methods="2" coveredmethods="2" elements="29" coveredelements="29" complexity="0" loc="17" ncloc="17" packages="1" files="1" classes="1"/>
-    <file name="Q1_module.js" path="/Users/yuny12345/Desktop/j1/Q1/Q1_module.js">
-      <metrics statements="17" coveredstatements="17" conditionals="10" coveredconditionals="10" methods="2" coveredmethods="2"/>
-      <line num="5" count="5" type="stmt"/>
-      <line num="6" count="5" type="cond" truecount="2" falsecount="0"/>
-      <line num="7" count="1" type="stmt"/>
-      <line num="10" count="4" type="stmt"/>
-      <line num="11" count="4" type="stmt"/>
-      <line num="12" count="4" type="cond" truecount="2" falsecount="0"/>
-      <line num="13" count="1" type="stmt"/>
-      <line num="16" count="3" type="cond" truecount="2" falsecount="0"/>
-      <line num="17" count="1" type="stmt"/>
-      <line num="20" count="2" type="cond" truecount="2" falsecount="0"/>
-      <line num="21" count="1" type="stmt"/>
-      <line num="26" count="1" type="stmt"/>
-      <line num="32" count="2" type="stmt"/>
-      <line num="34" count="2" type="cond" truecount="2" falsecount="0"/>
-      <line num="35" count="1" type="stmt"/>
-      <line num="39" count="1" type="stmt"/>
-      <line num="43" count="1" type="stmt"/>
+<coverage generated="1600858044133" clover="3.2.0">
+  <project timestamp="1600858044133" name="All files">
+    <metrics statements="31" coveredstatements="31" conditionals="16" coveredconditionals="16" methods="4" coveredmethods="4" elements="51" coveredelements="51" complexity="0" loc="31" ncloc="31" packages="1" files="4" classes="4"/>
+    <file name="conculateTicketPrice.js" path="/Users/yuny12345/Desktop/goodideas_practice_js17/Q3/Q3_modules/conculateTicketPrice.js">
+      <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="4" count="2" type="stmt"/>
+      <line num="5" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="8" count="1" type="stmt"/>
+    </file>
+    <file name="confirmDiscountQualification.js" path="/Users/yuny12345/Desktop/goodideas_practice_js17/Q3/Q3_modules/confirmDiscountQualification.js">
+      <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="4" count="2" type="stmt"/>
+      <line num="5" count="2" type="cond" truecount="4" falsecount="0"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="8" count="1" type="stmt"/>
+    </file>
+    <file name="confirmNatureNumber.js" path="/Users/yuny12345/Desktop/goodideas_practice_js17/Q3/Q3_modules/confirmNatureNumber.js">
+      <metrics statements="13" coveredstatements="13" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="4" count="6" type="stmt"/>
+      <line num="5" count="6" type="cond" truecount="2" falsecount="0"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="9" count="5" type="stmt"/>
+      <line num="10" count="5" type="stmt"/>
+      <line num="11" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="12" count="1" type="stmt"/>
+      <line num="15" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="16" count="1" type="stmt"/>
+      <line num="19" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="20" count="1" type="stmt"/>
+      <line num="23" count="2" type="stmt"/>
+    </file>
+    <file name="informTicketPrice.js" path="/Users/yuny12345/Desktop/goodideas_practice_js17/Q3/Q3_modules/informTicketPrice.js">
+      <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="5" count="6" type="stmt"/>
+      <line num="6" count="6" type="cond" truecount="2" falsecount="0"/>
+      <line num="7" count="4" type="stmt"/>
+      <line num="9" count="2" type="stmt"/>
     </file>
   </project>
 </coverage>
