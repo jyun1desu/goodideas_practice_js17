@@ -1,9 +1,28 @@
+//名字轉換陣列
+function getNameLetterArray(itemInput){
+    let eachLetterReg = /./g
+    return itemInput.match(eachLetterReg)
+}
 
+//名字(已經轉換陣列) 取單數字母
+function nameOddLetters(arrName){
+    for (var i = 0; i < arrName.length; i++) {
+        arrName.splice(i + 1, 1);
+    }
+    const result = arrName.join()
+    return result
+}
 
-var test1 = ["apple","banana","melon"]
+////合併
+function caculationResult(firstInput,secondInput){
+    const firstNameLetters = getNameLetterArray(firstInput)
+    const thirdNameLetters = getNameLetterArray(secondInput)
 
+    const firstNameResult = nameOddLetters(firstNameLetters);
+    const thirdNameResult = nameOddLetters(thirdNameLetters);
+    const finalResult = `${firstNameResult},${thirdNameResult}`
 
-let reg2 = /./g
-var matches_array = test1[0].match(reg2)
+    return finalResult
+}
 
-console.log(matches_array[0,2])
+module.exports = caculationResult

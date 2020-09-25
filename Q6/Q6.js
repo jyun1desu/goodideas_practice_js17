@@ -3,6 +3,7 @@
 
 const readline = require('readline');
 const confirmVaildInput  = require('./Q6_modules/confirmVaildInput');
+const caculationResult = require('./Q6_modules/getOddLetters');
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -15,7 +16,10 @@ function main() {
         if(confirmValidInput!=='isValidInput'){
             console.log(`${confirmValidInput}`);
             return main();
-        }return secondQuestion();
+        }
+        const name = [];
+        name.push(firstStrInput);
+        return secondQuestion();
 
         function secondQuestion() {
             rl.question('第二個：', (secondStrInput) => {
@@ -23,7 +27,9 @@ function main() {
                 if(confirmValidInput!=='isValidInput'){
                     console.log(`${confirmValidInput}`);
                     return secondQuestion();
-                }return thirdQuestion();
+                }
+                name.push(secondStrInput);
+                return thirdQuestion();
 
                 function thirdQuestion() {
                     rl.question('第三個：', (thirdStrInput) => {
@@ -31,7 +37,10 @@ function main() {
                         if(confirmValidInput!=='isValidInput'){
                             console.log(`${confirmValidInput}`);
                             return thirdQuestion();
-                        }return lastQuestion();
+                        }
+                        
+                        name.push(thirdStrInput);
+                        return lastQuestion();
         
                         function lastQuestion() {
                             rl.question('第四個：', (lastStrInput) => {
@@ -39,8 +48,10 @@ function main() {
                                 if(confirmValidInput!=='isValidInput'){
                                     console.log(`${confirmValidInput}`);
                                     return lastQuestion();
-                                }console.log(firstStrInput,lastStrInput);
-                
+                                }
+                                name.push(lastStrInput);
+                                const result = caculationResult(name[0],name[2])
+                                console.log(result);
                                 rl.close();
                             });
                         }
@@ -52,52 +63,3 @@ function main() {
 }
 
 main();
-
-
-// function firstQuestion() {
-//     rl.question('請輸入四個英文名字，現在是第一個：', (firstStrInput) => {
-//         let confirmValidInput = confirmVaildInput(firstStrInput);
-//         if(confirmValidInput!=='isValidInput'){
-//             console.log(`${confirmValidInput}`);
-//             return firstQuestion();
-//         }return secondQuestion();
-
-//     });
-// }
-
-// function secondQuestion() {
-//     rl.question('第二個：', (secondStrInput) => {
-//         let confirmValidInput = confirmVaildInput(secondStrInput);
-//         if(confirmValidInput!=='isValidInput'){
-//             console.log(`${confirmValidInput}`);
-//             return secondQuestion();
-//         }return thirdQuestion();
-
-//     });
-// }
-
-// function thirdQuestion() {
-//     rl.question('第三個：', (thirdStrInput) => {
-//         let confirmValidInput = confirmVaildInput(thirdStrInput);
-//         if(confirmValidInput!=='isValidInput'){
-//             console.log(`${confirmValidInput}`);
-//             return thirdQuestion();
-//         }return lastQuestion();
-
-
-//     });
-// }
-
-// function lastQuestion() {
-//     rl.question('第四個：', (lastStrInput) => {
-//         let confirmValidInput = confirmVaildInput(lastStrInput);
-//         if(confirmValidInput!=='isValidInput'){
-//             console.log(`${confirmValidInput}`);
-//             return lastQuestion();
-//         }console.log(firstStrInput,lastStrInput);
-
-//         rl.close();
-//     });
-// }
-
-// firstQuestion();
