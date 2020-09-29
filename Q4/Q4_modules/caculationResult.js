@@ -1,5 +1,5 @@
 //運算結果
-module.exports = function conculationResult(strInput) {
+module.exports = function caculationResult(strInput) {
     const n = strInput
     //輸入的偶數，若輸入奇數則是最大的偶數
     const maxEven = Math.floor(n/2)*2;

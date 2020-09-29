@@ -1,27 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1600858044133" clover="3.2.0">
-  <project timestamp="1600858044133" name="All files">
-    <metrics statements="31" coveredstatements="31" conditionals="16" coveredconditionals="16" methods="4" coveredmethods="4" elements="51" coveredelements="51" complexity="0" loc="31" ncloc="31" packages="1" files="4" classes="4"/>
-    <file name="conculateTicketPrice.js" path="/Users/yuny12345/Desktop/goodideas_practice_js17/Q3/Q3_modules/conculateTicketPrice.js">
-      <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+<coverage generated="1601358304750" clover="3.2.0">
+  <project timestamp="1601358304751" name="All files">
+    <metrics statements="26" coveredstatements="26" conditionals="14" coveredconditionals="14" methods="3" coveredmethods="3" elements="43" coveredelements="43" complexity="0" loc="26" ncloc="26" packages="1" files="3" classes="3"/>
+    <file name="caculationModel.js" path="/Users/yuny12345/Desktop/goodideas_practice_js17/Q5/Q5_modules/caculationModel.js">
+      <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
       <line num="1" count="1" type="stmt"/>
+      <line num="2" count="4" type="cond" truecount="2" falsecount="0"/>
       <line num="3" count="1" type="stmt"/>
-      <line num="4" count="2" type="stmt"/>
-      <line num="5" count="2" type="cond" truecount="2" falsecount="0"/>
-      <line num="6" count="1" type="stmt"/>
-      <line num="8" count="1" type="stmt"/>
+      <line num="5" count="3" type="stmt"/>
     </file>
-    <file name="confirmDiscountQualification.js" path="/Users/yuny12345/Desktop/goodideas_practice_js17/Q3/Q3_modules/confirmDiscountQualification.js">
-      <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
-      <line num="3" count="1" type="stmt"/>
-      <line num="4" count="2" type="stmt"/>
-      <line num="5" count="2" type="cond" truecount="4" falsecount="0"/>
-      <line num="6" count="1" type="stmt"/>
-      <line num="8" count="1" type="stmt"/>
-    </file>
-    <file name="confirmNatureNumber.js" path="/Users/yuny12345/Desktop/goodideas_practice_js17/Q3/Q3_modules/confirmNatureNumber.js">
-      <metrics statements="13" coveredstatements="13" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
+    <file name="caculationResult.js" path="/Users/yuny12345/Desktop/goodideas_practice_js17/Q5/Q5_modules/caculationResult.js">
+      <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
+      <line num="5" count="6" type="stmt"/>
+      <line num="6" count="6" type="cond" truecount="2" falsecount="0"/>
+      <line num="7" count="5" type="stmt"/>
+      <line num="10" count="1" type="stmt"/>
+      <line num="13" count="1" type="stmt"/>
+    </file>
+    <file name="confirmAvailibleInput.js" path="/Users/yuny12345/Desktop/goodideas_practice_js17/Q5/Q5_modules/confirmAvailibleInput.js">
+      <metrics statements="15" coveredstatements="15" conditionals="10" coveredconditionals="10" methods="1" coveredmethods="1"/>
       <line num="4" count="6" type="stmt"/>
       <line num="5" count="6" type="cond" truecount="2" falsecount="0"/>
       <line num="6" count="1" type="stmt"/>
@@ -33,17 +32,10 @@
       <line num="16" count="1" type="stmt"/>
       <line num="19" count="3" type="cond" truecount="2" falsecount="0"/>
       <line num="20" count="1" type="stmt"/>
-      <line num="23" count="2" type="stmt"/>
-    </file>
-    <file name="informTicketPrice.js" path="/Users/yuny12345/Desktop/goodideas_practice_js17/Q3/Q3_modules/informTicketPrice.js">
-      <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-      <line num="1" count="1" type="stmt"/>
-      <line num="2" count="1" type="stmt"/>
-      <line num="4" count="1" type="stmt"/>
-      <line num="5" count="6" type="stmt"/>
-      <line num="6" count="6" type="cond" truecount="2" falsecount="0"/>
-      <line num="7" count="4" type="stmt"/>
-      <line num="9" count="2" type="stmt"/>
+      <line num="23" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="24" count="1" type="stmt"/>
+      <line num="27" count="1" type="stmt"/>
+      <line num="29" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>

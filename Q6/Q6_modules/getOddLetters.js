@@ -1,7 +1,7 @@
 //名字轉換陣列
 function getNameLetterArray(itemInput){
-    let eachLetterReg = /./g
-    return itemInput.match(eachLetterReg)
+    let getEachLetterReg = /./g
+    return itemInput.match(getEachLetterReg)
 }
 
 //名字(已經轉換陣列) 取單數字母
@@ -9,7 +9,7 @@ function nameOddLetters(arrName){
     for (var i = 0; i < arrName.length; i++) {
         arrName.splice(i + 1, 1);
     }
-    const result = arrName.join()
+    const result = arrName.join('')
     return result
 }
 
@@ -17,7 +17,6 @@ function nameOddLetters(arrName){
 function caculationResult(firstInput,secondInput){
     const firstNameLetters = getNameLetterArray(firstInput)
     const thirdNameLetters = getNameLetterArray(secondInput)
-
     const firstNameResult = nameOddLetters(firstNameLetters);
     const thirdNameResult = nameOddLetters(thirdNameLetters);
     const finalResult = `${firstNameResult},${thirdNameResult}`

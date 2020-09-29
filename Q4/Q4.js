@@ -1,6 +1,6 @@
 //輸入 n 印出 1+2-3+4-5+6...n 的算式與總和
 const readline = require('readline');
-const resultWithFormula = require('./Q4_modules/resultWithFormula');
+const formula = require('./Q4_modules/resultWithFormula');
 
 const rl = readline.createInterface({
     input: process.stdin,
@@ -10,7 +10,7 @@ const rl = readline.createInterface({
 function main() {
     rl.question('請輸入任意正整數', (strInput) => {
         try {
-            const result = resultWithFormula(strInput);
+            const result = formula(strInput);
             console.log(`${result}`);
             
             rl.close();
@@ -20,5 +20,4 @@ function main() {
         }
     });
 }
-
 main();

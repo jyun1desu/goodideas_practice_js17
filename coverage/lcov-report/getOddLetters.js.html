@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for confirmNatureNumber.js</title>
+    <title>Code coverage report for getOddLetters.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="prettify.css" />
     <link rel="stylesheet" href="base.css" />
@@ -19,27 +19,27 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="index.html">All files</a> confirmNatureNumber.js</h1>
+        <h1><a href="index.html">All files</a> getOddLetters.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>13/13</span>
+                <span class='fraction'>14/14</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>8/8</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
@@ -81,62 +81,71 @@
 <a name='L22'></a><a href='#L22'>22</a>
 <a name='L23'></a><a href='#L23'>23</a>
 <a name='L24'></a><a href='#L24'>24</a>
-<a name='L25'></a><a href='#L25'>25</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">//確認輸入格式
-module.exports = function confirmNatureNumber(strInput){
-    //空字串
-    const isEmptyString = !strInput.trim().length
-    if(isEmptyString){
-        return '尚未輸入數字';
-    } 
-    //非數字
-    const numInput = Number(strInput)
-    const isNumber = !Number.isNaN(numInput)
-    if(!isNumber) {
-        return '請勿輸入阿拉伯數字以外的內容';
-    }
-    //負數
-    if(numInput &lt; 0) {
-        return '請勿輸入負數';
-    }
-    //小數
-    if(numInput % 1 !== 0) {
-        return '請勿輸入整數以外的內容';
-    }
-    //自然數
-    return 'natureNumber';
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">//名字轉換陣列
+function getNameLetterArray(itemInput){
+    let eachLetterReg = /./g
+    return itemInput.match(eachLetterReg)
 }
-&nbsp;</pre></td></tr></table></pre>
+&nbsp;
+//名字(已經轉換陣列) 取單數字母
+function nameOddLetters(arrName){
+    for (var i = 0; i &lt; arrName.length; i++) {
+        arrName.splice(i + 1, 1);
+    }
+    const result = arrName.join('')
+    return result
+}
+&nbsp;
+////合併
+function caculationResult(firstInput,secondInput){
+    const firstNameLetters = getNameLetterArray(firstInput)
+    const thirdNameLetters = getNameLetterArray(secondInput)
+&nbsp;
+    const firstNameResult = nameOddLetters(firstNameLetters);
+    const thirdNameResult = nameOddLetters(thirdNameLetters);
+    const finalResult = `${firstNameResult},${thirdNameResult}`
+&nbsp;
+    return finalResult
+}
+&nbsp;
+module.exports = caculationResult</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Tue Sep 29 2020 13:06:40 GMT+0800 (GMT+08:00)
+                at Fri Sep 25 2020 14:21:43 GMT+0800 (GMT+08:00)
             </div>
         </div>
         <script src="prettify.js"></script>

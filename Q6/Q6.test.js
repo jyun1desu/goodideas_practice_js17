@@ -33,11 +33,11 @@ test("正確格式",() =>  {
 });
 
 //輸入兩個名字輸出單數字母
-test("hello",() =>  {
+test("最後輸出的答案",() =>  {
     //Arrange
     const firstInput = "apple";
     const secondInput = "banana"
-    const expectedResult = "a,p,e,b,n,n"
+    const expectedResult = "ape,bnn"
     //Act
     const actualResult = caculationResult(firstInput,secondInput);
     //Assert

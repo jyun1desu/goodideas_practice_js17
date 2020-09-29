@@ -1,11 +1,10 @@
-
 //確認輸入格式
 module.exports = function confirmPositiveInteger(strInput){
     //空字串
     const isEmptyString = !strInput.trim().length
     if(isEmptyString){
         return '尚未輸入數字';
-    } 
+    }
     //非數字
     const numInput = Number(strInput)
     const isNumber = !Number.isNaN(numInput)

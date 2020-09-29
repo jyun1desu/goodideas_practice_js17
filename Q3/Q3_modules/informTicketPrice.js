@@ -1,10 +1,10 @@
 const confirmNatureNumber = require('./confirmNatureNumber');
-const conculateTicketPrice = require('./conculateTicketPrice');
+const caculateTicketPrice = require('./caculateTicketPrice');
 
 module.exports = function informTicketPrice(strInput){
     let confirmStatus = confirmNatureNumber(strInput);
         if (confirmStatus !== 'natureNumber') {
             throw confirmStatus
         }
-        return conculateTicketPrice(strInput);
+        return caculateTicketPrice(strInput);
 }
