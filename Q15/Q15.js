@@ -7,7 +7,6 @@
 // sport[1]*20 單槓總重
 // sport[2]*50 跑步機總重
 
-
 // 取得0~2的亂數:getRandom(3)
 function getRandom(input){
     return Math.floor(Math.random()*input)
