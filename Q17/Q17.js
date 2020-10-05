@@ -29,7 +29,7 @@ const candicateScoresArray=[
 
 //候選人順位轉換分數加總
 function getPointSum(candicateNumber){
-    for(i=0;i<4;i++){
+    for(i=0;i<votes.length;i++){
         candicatePoint[candicateNumber]+=votes[i]*candicateScoresArray[candicateNumber][i]
     }
     return candicatePoint[candicateNumber]
