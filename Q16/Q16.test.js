@@ -35,7 +35,7 @@ test("輸入正確：isValidInput",() =>  {
 });
 
 //字母向後平移
-test("向後平移3個單位：abcYZ => defAB",() =>  {
+test("向後平移3個單位：abcYZ => defBC",() =>  {
     //Arrange
     const input = "abcYZ";
     const expectedResult = "defBC";
