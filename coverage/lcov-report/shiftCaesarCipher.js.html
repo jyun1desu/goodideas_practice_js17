@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for confirmNatureNumber.js</title>
+    <title>Code coverage report for shiftCaesarCipher.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="prettify.css" />
     <link rel="stylesheet" href="base.css" />
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="index.html">All files</a> confirmNatureNumber.js</h1>
+        <h1><a href="index.html">All files</a> shiftCaesarCipher.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>13/13</span>
+                <span class='fraction'>14/14</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>13/13</span>
+                <span class='fraction'>14/14</span>
             </div>
         
             
@@ -79,67 +79,58 @@
 <a name='L20'></a><a href='#L20'>20</a>
 <a name='L21'></a><a href='#L21'>21</a>
 <a name='L22'></a><a href='#L22'>22</a>
-<a name='L23'></a><a href='#L23'>23</a>
-<a name='L24'></a><a href='#L24'>24</a>
-<a name='L25'></a><a href='#L25'>25</a>
-<a name='L26'></a><a href='#L26'>26</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L23'></a><a href='#L23'>23</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">//確認輸入格式
-module.exports = function confirmNatureNumber(strInput){
-    //空字串
-    const isEmptyString = !strInput.trim().length
-    if(isEmptyString){
-        return '尚未輸入數字';
-    } 
-    //非數字
-    const numInput = Number(strInput)
-    const isNumber = !Number.isNaN(numInput)
-    if(!isNumber) {
-        return '請勿輸入阿拉伯數字以外的內容';
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">// 凱撒密碼：輸入strInput,字母向後平移num單位
+function shiftCaesarCipher(strInput, num) {
+    let shiftResult = "";
+    for (i = 0; i &lt; strInput.length; i++) {
+        let character = strInput.charAt(i)
+        let characterCode = character.charCodeAt(0)
+        //大寫:unicode在65~90間
+        let uppercase = characterCode &gt;= 65 &amp;&amp; characterCode &lt;= 90
+        if (uppercase) {
+            let shiftcharacter = String.fromCharCode((characterCode + num - 65) % 26 + 65)
+            shiftResult += shiftcharacter
+        }
+        //小寫:unicode在97~122間
+        let lowercase = characterCode &gt;= 97 &amp;&amp; characterCode &lt;= 122
+        if (lowercase) {
+            let shiftcharacter = String.fromCharCode((characterCode + num - 97) % 26 + 97)
+            shiftResult += shiftcharacter
+        }
     }
-    //負數
-    if(numInput &lt; 0) {
-        return '請勿輸入負數';
-    }
-    //小數
-    if(numInput % 1 !== 0) {
-        return '請勿輸入整數以外的內容';
-    }
-    //自然數
-    // else {
-    // }
-    return 'natureNumber';
-}</pre></td></tr></table></pre>
+    return shiftResult
+}
+&nbsp;
+module.exports = shiftCaesarCipher</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Tue Sep 29 2020 20:02:00 GMT+0800 (GMT+08:00)
+                at Mon Oct 05 2020 11:58:35 GMT+0800 (GMT+08:00)
             </div>
         </div>
         <script src="prettify.js"></script>

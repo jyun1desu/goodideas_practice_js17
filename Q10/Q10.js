@@ -18,8 +18,8 @@ function findPrime(numInput) {
         if (numInput % i === 0) {
             return false
         }
-        return true
     }
+    return true
 }
 
 //建立新陣列，含有array[]中的質數
