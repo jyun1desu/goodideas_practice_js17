@@ -7,8 +7,8 @@ function shiftCaesarCipher(strInput, num) {
         //大寫:unicode在65~90間
         let uppercase = characterCode >= 65 && characterCode <= 90
         if (uppercase) {
-            let shiftcharacter = String.fromCharCode((characterCode + num - 65) % 26 + 65)
-            shiftResult += shiftcharacter
+            let shiftCharacter = String.fromCharCode((characterCode + num - 65) % 26 + 65)
+            shiftResult += shiftCharacter
         }
         //小寫:unicode在97~122間
         let lowercase = characterCode >= 97 && characterCode <= 122
