@@ -24,14 +24,15 @@ const item = [{
 ]
 
 function result(item, limit) {
-    let totalweight = putItemOnCar(item, limit).totalweight
-    let itemArray = putItemOnCar(item, limit).item
+    let carStatus = putItemOnCar(item, limit)
+    let totalweight = carStatus.totalweight
+    let itemArray = carStatus.item
     let result = ""
     for (i = 0; i < itemArray.length; i++) {
-        result += `${itemArray[i]["name"]}${itemArray[i]["amount"]}台，`
+        result += `${itemArray[i]["name"]}${itemArray[i]["amount"]}個，`
     }
     result += `總重${totalweight}公斤`
     return result
 }
 
-console.log(result(item, 1000))
+module.exports = result
