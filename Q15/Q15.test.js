@@ -1,6 +1,7 @@
 const result = require('./Q15')
 
 test("全部只放啞鈴", () => {
+    //Arrange
     global.Math.random = () => 0;
     const item = [{
         "name": "啞鈴",
@@ -30,6 +31,7 @@ test("全部只放啞鈴", () => {
 });
 
 test("全部只放單槓", () => {
+    //Arrange
     global.Math.random = () => 1/3;
     const item = [{
         "name": "啞鈴",
@@ -59,6 +61,7 @@ test("全部只放單槓", () => {
 });
 
 test("全部只放跑步機", () => {
+    //Arrange
     global.Math.random = () => 2/3;
     const item = [{
         "name": "啞鈴",
