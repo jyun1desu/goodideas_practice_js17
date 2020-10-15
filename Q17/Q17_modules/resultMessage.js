@@ -14,20 +14,13 @@ const getPointResult = require('./getPointResult')
 // 第四順位  |  4  |  1  |  1  |  1  |
 // -----------------------------------
 
-const originalArray = [
-    [1, 3, 2, 4],
-    [3, 2, 3, 3],
-    [2, 4, 4, 2],
-    [4, 1, 1, 1],
-]
-const votes = [51, 5, 23, 21]
-
-module.exports = function getElectionResult(candicateAmount, votesArray, rankArray) {
+module.exports = function getElectionResult(candicateAmount, votesArray, rankArray){
     let socreArray = getPointResult(candicateAmount, votesArray, rankArray)
-    let winner = socreArray.indexOf(Math.max(...socreArray)) + 1
+    let winner = socreArray.indexOf(Math.max(...socreArray))+1
     let string = ""
-    for (i = 0; i < socreArray.length; i++) {
+    for(i=0;i<socreArray.length;i++){
         string += `${i+1}號候選人為${socreArray[i]}分，`
     }
     return `${string}當選者為${winner}號候選人。`
 }
+

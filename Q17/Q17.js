@@ -22,11 +22,10 @@ const getElectionResult = require('./Q17_modules/resultMessage')
 const votes = [51, 5, 23, 21]
 const candicatesRankArray = [
     [1, 3, 2, 4],
-    [3, 2, 4, 1],
-    [2, 3, 4, 1],
-    [4, 3, 2, 1],
+    [3, 2, 3, 3],
+    [2, 4, 4, 2],
+    [4, 1, 1, 1],
 ]
-
 
 function main(candicateAmount, votesArray, rankArray){
     const result = getElectionResult(candicateAmount, votesArray, rankArray)
