@@ -17,20 +17,20 @@
 // 三號候選人 = 51*3 + 5*4 + 23*3 + 21*3
 // 四號候選人 = 51*1 + 5*2 + 23*2 + 21*4
 
-const getPointResult = require('./Q17_modules/getPointResult')
+const getElectionResult = require('./Q17_modules/resultMessage')
 
 const votes = [51, 5, 23, 21]
 const candicatesRankArray = [
-    [null, null, null, null],
-    [1, 4, 4, 4],
-    [2, 3, 4, 2],
-    [3, 4, 3, 3],
-    [1, 2, 2, 4],
+    [1, 3, 2, 4],
+    [3, 2, 4, 1],
+    [2, 3, 4, 1],
+    [4, 3, 2, 1],
 ]
 
-module.exports = function getElectionResult(candicateAmount, votesArray, rankArray){
-    let scoreResult = getPointResult(candicateAmount, votesArray, rankArray).result
-    let socreArray = getPointResult(candicateAmount, votesArray, rankArray).socreSumArray
-    let winner = socreArray.indexOf(Math.max(...socreArray))
-    return `${scoreResult}當選者為${winner}號候選人。`
+
+function main(candicateAmount, votesArray, rankArray){
+    const result = getElectionResult(candicateAmount, votesArray, rankArray)
+    return result
 }
+
+console.log(main(4, votes, candicatesRankArray))
