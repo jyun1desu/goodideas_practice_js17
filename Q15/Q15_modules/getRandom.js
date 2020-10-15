@@ -1,4 +1,5 @@
 module.exports = function getRandom(input) {
-    return Math.floor(Math.random() * input)
+    const num = Math.random();
+    return Math.floor(num * input)
 }
 
