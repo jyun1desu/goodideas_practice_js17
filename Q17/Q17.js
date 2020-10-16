@@ -19,17 +19,17 @@
 
 const getElectionResult = require('./Q17_modules/resultMessage')
 
-const votes = [51, 5, 23, 21]
+const votes = [0, 0, 0, 0, 0, 0, 0, 0]
 const candicatesRankArray = [
-    [1, 3, 2, 4],
-    [3, 2, 3, 3],
-    [2, 4, 4, 2],
-    [4, 1, 1, 1],
+    [1, 3, 2, 4, 1, 4, 3, 2],
+    [3, 2, 3, 3, 2, 3, 4, 3],
+    [2, 4, 4, 2, 3, 2, 1, 1],
+    [4, 1, 1, 1, 4, 1, 2, 4],
 ]
 
-function main(candicateAmount, votesArray, rankArray){
-    const result = getElectionResult(candicateAmount, votesArray, rankArray)
-    return result
+function main(votesArray, rankArray){
+    return getElectionResult(votesArray, rankArray)
 }
 
-console.log(main(4, votes, candicatesRankArray))
+console.log(main(votes, candicatesRankArray))
+// 1號候選人為253分，2號候選人為251分，3號候選人為305分，4號候選人為191分，當選者為3號候選人。

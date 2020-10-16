@@ -11,13 +11,22 @@
 // -----------------------------
 // 第四順位  |  4  |  1  |  1  |  1  |
 // -----------------------------------
+// const a = [[0,1,2,3,4],
+//             [4,3,2,1,0]]
 
+// let b =[]
+// for (let i = 0; i < a[0].length; i++) {
+//     b[i] = []
+//     for (let j = 0; j < a.length; j++) {
+//         console.log(b[i][j]=a[j][i])
+//     }
+// }
 
 function transposeArray(array) {
     let arr = [];
-    for (i = 0; i < array.length; i++) {
+    for (i = 0; i < array[0].length; i++) {
         arr[i] = []
-        for (j = 0; j < array[i].length; j++) {
+        for (j = 0; j < array.length; j++) {
             arr[i][j] = array[j][i]
         }
     }
@@ -26,12 +35,17 @@ function transposeArray(array) {
 
 module.exports = function candicateRankArray(array) {
     const transArray = transposeArray(array)
-    let candicateRankArray = []
+    const candicateRankArray = candicateRankArray2(transArray);
+    return candicateRankArray
+}
+
+function candicateRankArray2(transArray) {
+    const candicateRankArray = [];
     for (i = 0; i < transArray.length; i++) {
         candicateRankArray[i] = [];
         for (j = 0; j < transArray.length; j++) {
-            candicateRankArray[i][j] = transArray[j].indexOf(i + 1) + 1
+            candicateRankArray[i][j] = transArray[j].indexOf(i + 1) + 1;
         }
     }
-    return candicateRankArray
+    return candicateRankArray;
 }
